@@ -56,9 +56,9 @@ const technical_skills = [
   { name: "CSS", time: "3 years" }, 
   { name: "JavaScript", time: "3 years" }, 
   { name: "React", time: "3 years" },
-  { name: "MySQL", time: "1 year" }, 
-  { name: "Java", time: "2 years" },
   { name: "Python", time: "3 years" },
+  { name: "Java", time: "2 years" },
+  { name: "MySQL", time: "1 year" }, 
   { name: "C++", time: "1 year" },
   { name: "Android Studio" }  
 ]

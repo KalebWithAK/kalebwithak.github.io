@@ -21,7 +21,7 @@ function App() {
       <main>
         <section className="intro">
           <p>Hello, I am a Junior Computer Science student at the University of North Carolina at Charlotte. I am 
-          seeking internships in web and mobile application development for the summer of 2023.</p> 
+          seeking an internship in web and mobile application development for the summer of 2023.</p> 
           <p>Besides coding, I enjoy singing, dancing, playing basketball, reading, martial arts, going to 
           the gym, riding my electric skateboard, and watching movies.</p>
         </section>
