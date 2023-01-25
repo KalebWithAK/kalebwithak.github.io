@@ -40,13 +40,13 @@ const jobs = [
     company: "High Point University",
     img: "",
     date: "Jan 9, 2020 - Apr 16, 2020",
-    contribution: "Assisted students with understanding object oriented programming and data structures in C++ in order to complete lab assignments and projects."
+    contribution: "Assisted students with understanding object oriented programming and data structures using C++ in order to complete lab assignments and projects."
   },
   {
     position: "Web Development Intern",
     company: "Kravin Kitchen",
     img: "",
-    date: "Oct 10, 2020",
+    date: "Oct 10, 2020 - November 10, 2020",
     contribution: "Learned about front-end javascript frameworks to help facilitate the creative process during development."
   },
 ]

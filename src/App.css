@@ -6,6 +6,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  line-height: 1.75rem;
 }
 
 div.App {
@@ -13,8 +15,7 @@ div.App {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   margin: 0;
-  padding: 0 3rem;
-  font-size: 20px;
+  padding: 0;
 }
 
 span.datetime {
@@ -23,13 +24,17 @@ span.datetime {
   bottom: 0.5rem;
 }
 
+p {
+  font-size: 16px;
+}
+
 header {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 1rem;
-  padding: 0 3rem;
+  padding: 0rem 2rem;
   background: var(--maroon);
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 10px 10px;
   color: white;
   margin-bottom: 5rem;
 }
@@ -37,27 +42,34 @@ h1 {
   margin-right: auto;
   font-size: 48px;
   font-family: "Roboto";
+  padding: 0;
 }
 header a, header a:visited, footer a, footer a:visited {
   color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 header a:hover, footer a:hover {
   color: lightgray;
+  text-decoration: underline;
 }
 
 section {
   padding: 0 1rem;
-  width: 56rem;
+  width: 58rem;
   margin: auto;
 
   margin-bottom: 5rem;
 }
 
 section.intro {
-  width: 40rem;
+  width: 35rem;
   margin: auto;
-  font-size: 24px;
   margin-bottom: 5rem;
+}
+
+section.intro p {
+  font-size: 20px;
 }
 
 section.skills {
@@ -65,8 +77,8 @@ section.skills {
   display: flex;
   gap: 5rem;
   border-radius: 20px;
-  border: solid 4px var(--maroon);
-  
+  border: solid 2px var(--maroon);
+  width: 56rem;
 }
 
 div.technical-skills ul {
@@ -89,17 +101,22 @@ div.technical-skills span.datetime {
   margin-left: auto;
 }
 
+section.projects {
+  padding: 0;
+}
+
 div.card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 0;
 }
 
 div.project-card {
   width: 16rem;
   height: 30rem;
-  border: solid 4px var(--maroon);
-  border-radius: 20px;
+  border: solid 2px var(--maroon);
+  border-radius: 10px;
   padding: 0 0.5rem;
 
   position: relative;
@@ -124,23 +141,50 @@ div.project-card a img {
 
 section.education-experience-container {
   display: flex;
+  gap: 12rem;
   /*border: solid 1px red;*/
 }
 div.education {
   width: 50rem;
 }
 
-div.contact {
+section.contact {
   display: flex;
+  margin: auto;
+  border: solid var(--maroon) 2px;
+  border-radius: 10px;
+  margin-bottom: 5rem;
+  width: 34rem;
 }
 
-footer {
+section.contact h2 {
+  width: 16rem;
+  line-height: 2rem;
+}
+section.contact ul {
+  font-size: 20px;
+  list-style: none;
+}
+section.contact ul li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr fit-content;
   margin: 0 14rem;
   padding: 0 2rem;
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px 10px 0 0;
   background: var(--maroon);
   color: white;
+  justify-content: space-between;
+}
+footer ul {
+  justify-self: center;
+}
+
+footer a { 
+  font-size: 16px;
 }

@@ -13,7 +13,7 @@ export default function Project({ title, date, purpose, utilized, url }) {
       img = tsa
       break
     default:
-      img = null;
+      img = null
   }
 
   return (

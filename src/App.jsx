@@ -1,4 +1,7 @@
 import "./App.css"
+import phone from "./images/phone.png"
+import mail from "./images/mail.png"
+import location from "./images/location.png"
 
 import Experience from "./components/experience";
 import Project from "./components/project"
@@ -11,8 +14,8 @@ function App() {
     <div className="App">
       <header>
         <h1>Kaleb Dean</h1>
-        <a href="https://kalebwithak.github.io/resume">resume</a>
-        <a href="#contact">contact</a>
+        <a href="https://kalebwithak.github.io/resume">Resume</a>
+        <a href="#contact">Contact</a>
       </header>
 
       <main>
@@ -29,7 +32,7 @@ function App() {
             <ul>
               {technical_skills.map(skill => <li key={"technical_skill" + technical_skills.indexOf(skill)}>
                 {skill.name} 
-                <span className="datetime">{skill.time}</span>
+                <span className="datetime" style={{ bottom: 0 }}>{skill.time}</span>
               </li>)}
             </ul>
           </div>
@@ -43,7 +46,7 @@ function App() {
         </section>
 
         <section className="projects">
-          <h2 className="projects">Here are some projects</h2> 
+          <h2 className="projects">Projects I Have Worked On</h2> 
 
           <div className="card-container"> 
           {projects.map(project => {
@@ -98,16 +101,16 @@ function App() {
           {/* <img src={require("./images/profile.jpg")} */}
           
           <ul>
-            <li>
-              {/* <img src={require("./images/email.png")} */}
+            <li className="email">
+              <img src={mail} />
               <a href="mailto:kad9603@gmail.com">kad9603@gmail.com</a>
             </li>
-            <li>
-              {/* <img src={require("./images/phone.png")} */}
+            <li className="phone">
+              <img src={phone} />
               <a href="tel:9802987018">980-298-7018</a>
             </li>
-            <li>
-              {/* <img src={require("./images/location.png")} */}
+            <li className="location">
+              <img src={location} />
               <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7">Charlotte, NC</a>
             </li>
           </ul>
@@ -115,8 +118,13 @@ function App() {
       </main>
 
       <footer>
-        <p>Built with <a href="https://reactjs.org">React</a></p>
-        <p>This website does not use cookies 🍪</p>
+        <p style={{ gridColumn: 1, gridRow: 1}}>Built with <a href="https://reactjs.org">React</a></p>
+        <p style={{ gridColumn: 2, gridRow: 1, justifySelf: "end"}}>This website does not use cookies 🍪</p>
+        <ul style={{ gridColumn: "1 / 3", gridRow: 2}}>
+          <li><a target="_blank" href="https://icons8.com/icon/85059/phone">Phone</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
+          <li><a target="_blank" href="https://icons8.com/icon/85467/mail">Mail</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
+          <li><a target="_blank" href="https://icons8.com/icon/88172/map-pin">Map Pin</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
+        </ul>
       </footer>
     </div>
   );
