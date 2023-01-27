@@ -8,7 +8,6 @@ import Project from "./components/project"
 import { technical_skills, soft_skills, projects, jobs } from "./data"
 
 function App() {
-  
 
   return (
     <div className="App">

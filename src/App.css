@@ -1,6 +1,9 @@
 :root {
   --maroon: #800000;
   --navy: #000080;
+  --amber: #f1b416;
+  --gold: #d2bb5c;
+  --lightblue: #e8f0ff;
 }
 
 body {
@@ -28,6 +31,18 @@ p {
   font-size: 16px;
 }
 
+a, a:visited {
+  color: var(--navy);
+  text-decoration: none;
+  position: relative;
+}
+a:hover, a:active {
+  text-decoration: none;
+}
+a::before {
+  width: 100%;
+}
+
 header {
   display: flex;
   align-items: baseline;
@@ -42,7 +57,11 @@ h1 {
   margin-right: auto;
   font-size: 48px;
   font-family: "Roboto";
-  padding: 0;
+  background: linear-gradient(10deg, var(--amber), var(--gold), var(--amber));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 48px;
 }
 header a, header a:visited, footer a, footer a:visited {
   color: white;
@@ -80,7 +99,7 @@ section.skills {
   height: 12rem;
   display: flex;
   gap: 5rem;
-  border-radius: 20px;
+  border-radius: 10px;
   border: solid 2px var(--maroon);
   width: 56rem;
 }
@@ -98,8 +117,6 @@ div.technical-skills ul li {
   display: flex;
   align-items: center;
   width: 12rem;
-  max-height: 10rem;
-  list-style-type: disc;
 }
 div.technical-skills span.datetime {
   margin-left: auto;
@@ -118,7 +135,7 @@ div.card-container {
 
 div.project-card {
   width: 16rem;
-  height: 30rem;
+  height: 22rem;
   border: solid 2px var(--maroon);
   border-radius: 10px;
   padding: 0 0.5rem;
@@ -129,7 +146,7 @@ div.project-card a, div.project-card a:visited {
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 15rem;
+  height: 10rem;
   justify-content: space-between;
   color: var(--navy);
   text-decoration: none;
@@ -140,7 +157,9 @@ div.project-card a:hover {
 }
 div.project-card a img {
   align-self: center;
-  margin-bottom: 1rem;
+}
+div.project-card h3 {
+  padding: 0;
 }
 
 section.education-experience-container {
@@ -205,7 +224,13 @@ footer a {
   
   body {
     font-size: 16px;
-    background: solid red 1px;
+    
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .App {
+    width: 100%;
   }
 
   span.datetime {
@@ -217,7 +242,7 @@ footer a {
   header {
     display: flex;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0 1rem;
     margin-bottom: 1.5rem;
   }
   h1 {
@@ -250,22 +275,29 @@ footer a {
   }
 
   section.skills {
-    gap: 1rem;
     margin: auto;
     border: none;
-    flex-direction: column;
     height: fit-content;
-    width: 90%;
+    width: 25rem;
+    border: solid var(--maroon) 2px;
+    margin-bottom: 3rem;
   }
 
   section.skills h2 {
     font-size: 1.25rem;
   }
 
+  div.technical-skills {
+    width: 45%;
+  }
+
   div.technical-skills ul {
     flex-direction: column;
   }
 
+  div.soft-skills {
+    width: 45%;
+  }
   div.soft-skills ul {
     list-style-type: none;
     margin-bottom: 3rem;
@@ -277,8 +309,9 @@ footer a {
   }
 
   div.card-container {
-    flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
   }
 
   section.education-experience-container {
@@ -300,10 +333,10 @@ footer a {
     margin: 0;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 6rem;
     gap: 1rem;
   }
   footer ul {
-    margin-left: 3rem;
+    margin-left: 1.5rem;
   }
 }
