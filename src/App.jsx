@@ -2,6 +2,7 @@ import "./App.css"
 import phone from "./images/phone.png"
 import mail from "./images/mail.png"
 import location from "./images/location.png"
+import Kaleb from "./images/Kaleb.jpg"
 
 import Experience from "./components/experience";
 import Project from "./components/project"
@@ -19,13 +20,35 @@ function App() {
 
       <main>
         <section className="intro">
-          <p>Hello, I am a Junior Computer Science student at the University of North Carolina at Charlotte. I am 
+          {/*<p>Hello, I am a Junior Computer Science student at the University of North Carolina at Charlotte. I am 
           seeking an internship in web and mobile application development for the summer of 2023.</p> 
           <p>Besides coding, I enjoy singing, dancing, playing basketball, reading, martial arts, going to 
-          the gym, riding my electric skateboard, and watching movies.</p>
+          the gym, riding my electric skateboard, and watching movies.</p>*/}
+          <img src={Kaleb} alt="Kaleb Dean" />
+
+          <p>
+            Hello, I am Kaleb Dean a Computer Science major at UNC Charlotte 
+            concentrating in Web and Mobile Application Development. Working with you will 
+            allow me to put my technical skills to the test, learn from more seasoned 
+            developers, and understand the inner workings of business. 
+          </p>
+          <p>
+            I am not only a technical asset, I also have strong communication, 
+            leadership, and mentorship skills. In class and in the mixed martial arts club at 
+            UNC Charlotte, I try to help the person next to me understand the material. I 
+            have a teamwork mindset where I want to see those around me grow just as much as 
+            myself. 
+          </p>
         </section>
 
         <section className="skills">
+        <div className="soft-skills">
+            <h2>Soft Skills</h2>
+            <ul>
+              {soft_skills.map(skill => <li key={"soft_skill" + soft_skills.indexOf(skill)}>{skill}</li>)}
+            </ul>
+          </div>
+
           <div className="technical-skills">
             <h2>Technical Skills</h2>
             <ul>
@@ -33,13 +56,6 @@ function App() {
                 {skill.name} 
                 <span className="datetime" style={{ bottom: 0 }}>{skill.time}</span>
               </li>)}
-            </ul>
-          </div>
-
-          <div className="soft-skills">
-            <h2>Soft Skills</h2>
-            <ul>
-              {soft_skills.map(skill => <li key={"soft_skill" + soft_skills.indexOf(skill)}>{skill}</li>)}
             </ul>
           </div>
         </section>
@@ -99,20 +115,11 @@ function App() {
           <h2 id="contact">Looking for an intern? Get in touch!</h2>
           {/* <img src={require("./images/profile.jpg")} */}
           
-          <ul>
-            <li className="email">
-              <img src={mail} />
-              <a href="mailto:kad9603@gmail.com">kad9603@gmail.com</a>
-            </li>
-            <li className="phone">
-              <img src={phone} />
-              <a href="tel:9802987018">980-298-7018</a>
-            </li>
-            <li className="location">
-              <img src={location} />
-              <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7">Charlotte, NC</a>
-            </li>
-          </ul>
+          <contact>
+            <a href="mailto:kad9603@gmail.com"><img src={mail} /> kad9603@gmail.com</a>
+            <a href="tel:9802987018"><img src={phone} /> 980-298-7018</a>
+            <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7"><img src={location} /> Charlotte, NC</a>
+          </contact>
         </section>
       </main>
 
