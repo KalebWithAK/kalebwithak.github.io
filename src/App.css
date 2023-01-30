@@ -296,7 +296,11 @@ footer a {
   }
 
   section.intro {
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 1rem;
   }
   section.intro p {
     width: 100%;
@@ -309,7 +313,7 @@ footer a {
     margin: auto;
     border: none;
     height: fit-content;
-    width: 25rem;
+    width: 28rem;
     border: solid var(--maroon) 2px;
     margin-bottom: 3rem;
   }
@@ -318,8 +322,17 @@ footer a {
     font-size: 1.25rem;
   }
 
+  section.skills div {
+    margin: 0;
+  }
+
+  div.soft-skills ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
   div.technical-skills {
-    width: 45%;
+    width: 55%;
   }
 
   div.technical-skills ul {
@@ -355,7 +368,7 @@ footer a {
   }
 
   section.contact {
-    width: 80%;
+    width: 60%;
     flex-direction: column;
   }
 
