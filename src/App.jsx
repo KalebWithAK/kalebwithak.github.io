@@ -115,11 +115,11 @@ function App() {
           <h2 id="contact">Looking for an intern? Get in touch!</h2>
           {/* <img src={require("./images/profile.jpg")} */}
           
-          <contact>
+          <nav className="contact">
             <a href="mailto:kad9603@gmail.com"><img src={mail} /> kad9603@gmail.com</a>
             <a href="tel:9802987018"><img src={phone} /> 980-298-7018</a>
             <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7"><img src={location} /> Charlotte, NC</a>
-          </contact>
+          </nav>
         </section>
       </main>
 

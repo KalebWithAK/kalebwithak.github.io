@@ -217,12 +217,12 @@ section.contact contact {
   font-size: 20px;
   list-style: none;
 }
-section.contact contact a {
+nav.contact a {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-section.contact a:hover {
+nav.contact a:hover {
   text-decoration: underline;
   color: var(--amber);
 }
@@ -313,9 +313,11 @@ footer a {
     margin: auto;
     border: none;
     height: fit-content;
-    width: 28rem;
+    width: 80%;
     border: solid var(--maroon) 2px;
     margin-bottom: 3rem;
+    flex-direction: column;
+    padding-left: 10vw;
   }
 
   section.skills h2 {
@@ -332,19 +334,18 @@ footer a {
   }
 
   div.technical-skills {
-    width: 55%;
+    width: 60vw;
   }
 
   div.technical-skills ul {
-    flex-direction: column;
+    flex-direction: column; 
+  }
+  div.technical-skills ul li {
+    width: 45vw;
   }
 
-  div.soft-skills {
-    width: 45%;
-  }
   div.soft-skills ul {
     list-style-type: none;
-    margin-bottom: 3rem;
   }
 
 
@@ -368,7 +369,8 @@ footer a {
   }
 
   section.contact {
-    width: 60%;
+    width: fit-content;
+    border: solid var(--maroon) 2px;
     flex-direction: column;
   }
 
