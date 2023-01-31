@@ -84,7 +84,7 @@ function App() {
             <h2>Education</h2>
             <h3>Pursuing Bachelor's in Computer Science</h3>
             <p>Concentrating in Web and Mobile Application Development</p>
-            <p>Anticiated Graduation: <span className="datetime" style={{ bottom: 0 }}>May 2024</span></p>
+            <p>Anticipated Graduation: <span className="datetime" style={{ bottom: 0 }}>May 2024</span></p>
 
               <p>University of North Carolina at Charlotte</p>
               <span className="datetime">Fall 2020 - Present</span>
@@ -116,7 +116,7 @@ function App() {
           {/* <img src={require("./images/profile.jpg")} */}
           
           <nav className="contact">
-            <a href="mailto:kad9603@gmail.com"><img src={mail} /> kad9603@gmail.com</a>
+            <a href="mailto:kdean15@uncc.edu"><img src={mail} /> kdean15@uncc.edu</a>
             <a href="tel:9802987018"><img src={phone} /> 980-298-7018</a>
             <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7"><img src={location} /> Charlotte, NC</a>
           </nav>
