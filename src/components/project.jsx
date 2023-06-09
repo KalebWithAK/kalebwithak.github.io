@@ -1,11 +1,11 @@
 import { englishList } from "../lib"
-import tsa from "../images/tsa.png"
-import xavier_austin_group from "../images/xavier-austin-group.png"
+//mport tsa from "../images/tsa.png"
+//import xavier_austin_group from "../images/xavier-austin-group.png"
 
-export default function Project({ title, date, purpose, utilized, url }) {
-  let img
+export default function Project({ title, img, date, purpose, utilized, url }) {
 
-  switch (title.toLowerCase()) {
+
+  /*switch (title.toLowerCase()) {
     case "xavier austin group":
       img = xavier_austin_group
       break
@@ -14,12 +14,13 @@ export default function Project({ title, date, purpose, utilized, url }) {
       break
     default:
       img = null
-  }
+  }*/
+  console.log(img)
 
   return (
     <div className="project-card">
       <a href={url}>
-        <img src={img} alt={`${title} logo`} />
+        <img src={'/images/' + img} alt={`${title} logo`} />
         <h3>{title}</h3>
       </a>
       <span className="datetime">{date}</span>

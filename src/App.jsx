@@ -1,8 +1,8 @@
 import "./App.css"
-import phone from "./images/phone.png"
-import mail from "./images/mail.png"
-import location from "./images/location.png"
-import Kaleb from "./images/Kaleb.jpg"
+//import phone from "."
+//import mail from "."
+//import location from ""
+//import Kaleb from ""
 
 import Experience from "./components/experience";
 import Project from "./components/project"
@@ -24,7 +24,7 @@ function App() {
           seeking an internship in web and mobile application development for the summer of 2023.</p> 
           <p>Besides coding, I enjoy singing, dancing, playing basketball, reading, martial arts, going to 
           the gym, riding my electric skateboard, and watching movies.</p>*/}
-          <img src={Kaleb} alt="Kaleb Dean" />
+          <img src={'/images/Kaleb.jpg'} alt="Kaleb Dean" />
 
           <p>
             Hello, I am Kaleb Dean a Computer Science major at UNC Charlotte 
@@ -61,11 +61,11 @@ function App() {
         </section>
 
         <section className="projects">
-          <h2 className="projects">Projects I Have Worked On</h2> 
+          <h2 className="projects">Projects</h2> 
 
           <div className="card-container"> 
           {projects.map(project => {
-            const { title, img, date, purpose, utilized, url } = project
+            const { title, img, date, purpose, utilized, url, github } = project
             
             return <Project key={"project" + projects.indexOf(project)} 
                 title={title} 
@@ -74,25 +74,14 @@ function App() {
                 purpose={purpose} 
                 utilized={utilized}
                 url={url}
+                github={github}
             />
           })}
           </div>
         </section>
 
         <section className="education-experience-container">
-          <div className="education">
-            <h2>Education</h2>
-            <h3>Pursuing Bachelor's in Computer Science</h3>
-            <p>Concentrating in Web and Mobile Application Development</p>
-            <p>Anticipated Graduation: <span className="datetime" style={{ bottom: 0 }}>May 2024</span></p>
-
-              <p>University of North Carolina at Charlotte</p>
-              <span className="datetime">Fall 2020 - Present</span>
-              <p>High Point University</p>
-              <span className="datetime">Fall 2019 - Spring 2020</span>
-          </div>
-
-          <div className="experience">
+        <div className="experience">
             <h2>Experience</h2>
 
             <div className="jobs">
@@ -109,28 +98,39 @@ function App() {
             })}
             </div>
           </div>
+
+          <div className="education">
+            <h2>Education</h2>
+            <h3>Pursuing Bachelor's in Computer Science</h3>
+            <p>Concentrating in Web and Mobile Application Development</p>
+            <p>Anticipated Graduation: <span className="datetime" style={{ bottom: 0 }}>May 2024</span></p>
+
+              <p>University of North Carolina at Charlotte</p>
+              <span className="datetime">Fall 2020 - Present</span>
+              <p>High Point University</p>
+              <span className="datetime">Fall 2019 - Spring 2020</span>
+          </div>
         </section>
 
         <section className="contact">
-          <h2 id="contact">Looking for an intern? Get in touch!</h2>
+          <h2 id="contact">Looking for a developer? <br></br>Get in touch!</h2>
           {/* <img src={require("./images/profile.jpg")} */}
           
           <nav className="contact">
-            <a href="mailto:kdean15@uncc.edu"><img src={mail} /> kdean15@uncc.edu</a>
-            <a href="tel:9802987018"><img src={phone} /> 980-298-7018</a>
-            <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7"><img src={location} /> Charlotte, NC</a>
+            <a href="mailto:kdean15@uncc.edu"><img src={'/images/mail.png'} /> kad9603@gmail.com</a>
+            <a href="tel:9802987018"><img src={'/images/phone.png'} /> 980-298-7018</a>
+            <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7"><img src={'/images/location.png'} /> Charlotte, NC</a>
           </nav>
         </section>
       </main>
 
       <footer>
-        <p style={{ gridColumn: 1, gridRow: 1}}>Built with <a href="https://reactjs.org">React</a></p>
-        <p style={{ gridColumn: 2, gridRow: 1, justifySelf: "end"}}>This website does not use cookies 🍪</p>
-        <ul style={{ gridColumn: "1 / 3", gridRow: 2}}>
+        <p>Built with <a href="https://reactjs.org">React</a></p>
+        {/*<ul style={{ gridColumn: "1 / 3", gridRow: 2}}>
           <li><a target="_blank" href="https://icons8.com/icon/85059/phone">Phone</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
           <li><a target="_blank" href="https://icons8.com/icon/85467/mail">Mail</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
           <li><a target="_blank" href="https://icons8.com/icon/88172/map-pin">Map Pin</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
-        </ul>
+          </ul>*/}
       </footer>
     </div>
   );

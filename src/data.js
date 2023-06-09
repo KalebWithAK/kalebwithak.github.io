@@ -5,7 +5,8 @@ const projects = [
     date: "",
     purpose: "",
     utilized: [],
-    url: ""
+    url: "",
+    github: ""
   }*/
   {
     title: "Xavier Austin Group",
@@ -23,7 +24,16 @@ const projects = [
     purpose: "An online flier which raised awareness for South Mecklenburg High School’s TSA club.",
     utilized: ["HTML", "CSS"],
     url: "https://kalebwithak.github.io/southmecktsa/",
-    github: ""
+    github: "https://github.com/KalebWithAK/southmecktsa"
+  },
+  {
+    title: "IT Project Management",
+    img: "it-project-management.png",
+    date: "May 1, 2023",
+    purpose: "A blog site to refresh project managers on Agile methodology and IT project management knowledge areas.",
+    utilized: ["HTML", "CSS", "Javascript", "JSON"],
+    url: "https://kalebwithak.github.io/it-project-management/",
+    github: "https://github.com/KalebWithAK/it-project-management"
   }
 ]
 
