@@ -12,7 +12,7 @@ const projects = [
     title: "Xavier Austin Group",
     img: "xavier-austin-group.png",
     date: "Feb 11, 2022",
-    purpose: "A landing page for my Mom's business leadership consulting company.",
+    purpose: "A landing page for a business leadership consulting company.",
     utilized: ["React", "CSS"],
     url: "https://kalebwithak.github.io/xavieraustingroup/",
     github: "https://github.com/KalebWithAK/xavieraustingroup"
@@ -50,7 +50,7 @@ const jobs = [
     company: "High Point University",
     img: "",
     date: "Jan 9, 2020 - Apr 16, 2020",
-    contribution: "Assisted students with understanding object oriented programming and data structures using C++ in order to complete lab assignments and projects."
+    contribution: "Assisted students with understanding object oriented programming and data structures using C++ to complete lab assignments and projects."
   },
   {
     position: "Web Development Intern",

@@ -2,7 +2,7 @@ import { englishList } from "../lib"
 //mport tsa from "../images/tsa.png"
 //import xavier_austin_group from "../images/xavier-austin-group.png"
 
-export default function Project({ title, img, date, purpose, utilized, url }) {
+export default function Project({ title, img, date, purpose, utilized, url, github }) {
 
 
   /*switch (title.toLowerCase()) {
@@ -18,14 +18,15 @@ export default function Project({ title, img, date, purpose, utilized, url }) {
   console.log(img)
 
   return (
-    <div className="project-card">
-      <a href={url}>
-        <img src={'/images/' + img} alt={`${title} logo`} />
-        <h3>{title}</h3>
-      </a>
+    <div className="card">
+      <img src={'/images/' + img} alt={`${title} logo`} />
+      <h3>{title}</h3>
       <span className="datetime">{date}</span>
       <p>{purpose}</p>
-      <p style={{position: "absolute", bottom: "1rem"}}>Built with {englishList(utilized)}</p>
+      <div className="flex">
+      <a className="button" href={url}>Visit</a>
+      <a className="button" href={github}>Source Code</a>
+      </div>
     </div>
   )
 }

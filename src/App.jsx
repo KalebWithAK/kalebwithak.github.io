@@ -1,4 +1,5 @@
 import "./App.css"
+import { useState } from 'react'
 //import phone from "."
 //import mail from "."
 //import location from ""
@@ -9,24 +10,31 @@ import Project from "./components/project"
 import { technical_skills, soft_skills, projects, jobs } from "./data"
 
 function App() {
+  const [bioButtonText, setBioButtonText] = useState('Need a developer?')
+  function handleBioButtonMouseEnter() {
+    setTimeout(() => setBioButtonText('Get in touch!'), 200)
+  }
+
+  function handleBioButtonMouseLeave() {
+    setTimeout(() => setBioButtonText('Need a developer?'), 300)
+  }
+
 
   return (
     <div className="App">
       <header>
         <h1>Kaleb Dean</h1>
-        <a href="https://kalebwithak.github.io/resume">Resume</a>
-        <a href="#contact">Contact</a>
+        <nav>
+          <a href="https://kalebwithak.github.io/resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </header>
 
       <main>
-        <section className="intro">
-          {/*<p>Hello, I am a Junior Computer Science student at the University of North Carolina at Charlotte. I am 
-          seeking an internship in web and mobile application development for the summer of 2023.</p> 
-          <p>Besides coding, I enjoy singing, dancing, playing basketball, reading, martial arts, going to 
-          the gym, riding my electric skateboard, and watching movies.</p>*/}
-          <img src={'/images/Kaleb.jpg'} alt="Kaleb Dean" />
+        <section className="bio bio-1">
+          <img src={'/images/Kaleb.jpg'} alt="Kaleb Dean" className="bio-img" />
 
-          <p>
+          {/*<p>
             Hello, I am Kaleb Dean a Computer Science major at UNC Charlotte 
             concentrating in Web and Mobile Application Development. Working with you will 
             allow me to put my technical skills to the test, learn from more seasoned 
@@ -35,35 +43,31 @@ function App() {
           <p>
             I am not only a technical asset, I also have strong communication, 
             leadership, and mentorship skills. In class and in the mixed martial arts club at 
-            UNC Charlotte, I try to help the person next to me understand the material. I 
+            UNC Charlotte, I help the people next to me understand the material. I 
             have a teamwork mindset where I want to see those around me grow just as much as 
             myself. 
-          </p>
-        </section>
+  </p>*/}
+          <div className="bio-content">
+            <h2>Full Stack Developer</h2>
+            <p>
+              I am earning my B.A. in Computer Science at the University of North Carolina at 
+              Charlotte. I wrote my first lines of code when I was fifteen. I became a TA for an 
+              intro to computer science course in my freshman year at High Point University.
+            </p>
+            <p>Now I build websites for small businesses and professionals and  I will graduate in May of 2023.</p>
 
-        <section className="skills">
-        <div className="soft-skills">
-            <h2>Soft Skills</h2>
-            <ul>
-              {soft_skills.map(skill => <li key={"soft_skill" + soft_skills.indexOf(skill)}>{skill}</li>)}
-            </ul>
-          </div>
-
-          <div className="technical-skills">
-            <h2>Technical Skills</h2>
-            <ul>
-              {technical_skills.map(skill => <li key={"technical_skill" + technical_skills.indexOf(skill)}>
-                {skill.name} 
-                <span className="datetime" style={{ bottom: 0 }}>{skill.time}</span>
-              </li>)}
-            </ul>
+            <a href="#contact" className="button" 
+              onMouseEnter={handleBioButtonMouseEnter}
+              onMouseLeave={handleBioButtonMouseLeave}>
+                {bioButtonText}
+              </a>
           </div>
         </section>
 
         <section className="projects">
           <h2 className="projects">Projects</h2> 
 
-          <div className="card-container"> 
+          <div className="flex"> 
           {projects.map(project => {
             const { title, img, date, purpose, utilized, url, github } = project
             
@@ -80,7 +84,26 @@ function App() {
           </div>
         </section>
 
-        <section className="education-experience-container">
+        <div className="grid">
+        <section className="skills">
+          <div className="soft-skills">
+              <h2>Soft Skills</h2>
+              <ul>
+                {soft_skills.map(skill => <li key={"soft_skill" + soft_skills.indexOf(skill)}>{skill}</li>)}
+              </ul>
+            </div>
+
+            <div className="technical-skills">
+              <h2>Technical Skills</h2>
+              <ul>
+                {technical_skills.map(skill => <li key={"technical_skill" + technical_skills.indexOf(skill)}>
+                  {skill.name} 
+                  {/*<span className="datetime" style={{ bottom: 0 }}>{skill.time}</span>*/}
+                </li>)}
+              </ul>
+            </div>
+        </section>
+
         <div className="experience">
             <h2>Experience</h2>
 
@@ -110,28 +133,27 @@ function App() {
               <p>High Point University</p>
               <span className="datetime">Fall 2019 - Spring 2020</span>
           </div>
-        </section>
+        </div>
 
-        <section className="contact">
-          <h2 id="contact">Looking for a developer? <br></br>Get in touch!</h2>
-          {/* <img src={require("./images/profile.jpg")} */}
+        <section className="contact" id="contact">
+          <h2 id="contact">Do you need a developer? <br /><br />Get in touch!</h2>
           
           <nav className="contact">
-            <a href="mailto:kdean15@uncc.edu"><img src={'/images/mail.png'} /> kad9603@gmail.com</a>
-            <a href="tel:9802987018"><img src={'/images/phone.png'} /> 980-298-7018</a>
-            <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7"><img src={'/images/location.png'} /> Charlotte, NC</a>
+            <a href="mailto:kdean15@uncc.edu">
+              <img src={'/images/mail.png'} />
+              <p>kad9603@gmail.com</p>
+            </a>
+            <a href="tel:9802987018">
+              <img src={'/images/phone.png'} />
+              <p>980-298-7018</p>
+            </a>
+            <a href="https://goo.gl/maps/TnDGyHT9D2VUAUtv7">
+              <img src={'/images/location.png'} /> 
+              <p>Charlotte, NC</p>
+            </a>
           </nav>
         </section>
       </main>
-
-      <footer>
-        <p>Built with <a href="https://reactjs.org">React</a></p>
-        {/*<ul style={{ gridColumn: "1 / 3", gridRow: 2}}>
-          <li><a target="_blank" href="https://icons8.com/icon/85059/phone">Phone</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
-          <li><a target="_blank" href="https://icons8.com/icon/85467/mail">Mail</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
-          <li><a target="_blank" href="https://icons8.com/icon/88172/map-pin">Map Pin</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
-          </ul>*/}
-      </footer>
     </div>
   );
 }
