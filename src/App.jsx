@@ -139,7 +139,7 @@ function App() {
           <h2 id="contact">Do you need a developer? <br /><br />Get in touch!</h2>
           
           <nav className="contact">
-            <a href="mailto:kdean15@uncc.edu">
+            <a href="mailto:muhammadkaleb67@gmail.edu">
               <img src={'/images/mail.png'} />
               <p>muhammadkaleb67@gmail.com</p>
             </a>
