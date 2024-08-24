@@ -224,11 +224,11 @@ section.contact {
   justify-content: space-around;
   margin: auto;
   border: var(--border);
-  transition: padding var(--timing) ease;
+  /*transition: padding var(--timing) ease;*/
 }
-section.contact:hover {
+/*section.contact:hover {
   padding: 24px;
-}
+}*/
 .contact nav {
   display: flex;
   flex-direction: column;
@@ -240,9 +240,9 @@ section.contact:hover {
   align-items: center;
   gap: 4px;
 }
-.contact nav a p {
+/*.contact nav a p {
   transition: var(--timing) font-size ease;
-}
+}*/
 .contact nav a:hover > p {
   font-size: 22px;
 }
