@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Kaleb Dean</h1>
+        <h1>Muhammad Dean</h1>
         <nav>
           <a href="https://kalebwithak.github.io/resume">Resume</a>
           <a href="#contact">Contact</a>
@@ -32,7 +32,7 @@ function App() {
 
       <main>
         <section className="bio bio-1">
-          <img src={'/images/Kaleb.jpg'} alt="Kaleb Dean" className="bio-img" />
+          <img src={'/images/Kaleb.jpg'} alt="Muhammad Dean" className="bio-img" />
 
           {/*<p>
             Hello, I am Kaleb Dean a Computer Science major at UNC Charlotte 
@@ -54,7 +54,7 @@ function App() {
               Charlotte. I wrote my first lines of code when I was fifteen. I became a TA for an 
               intro to computer science course in my freshman year at High Point University.
             </p>
-            <p>Now I build websites for small businesses and professionals and  I will graduate in May of 2023.</p>
+            <p>Now I build websites for large corporations, small businesses, and entreprenuerial professionals. I graduate in May of 2025.</p>
 
             <a href="#contact" className="button" 
               onMouseEnter={handleBioButtonMouseEnter}
@@ -141,7 +141,7 @@ function App() {
           <nav className="contact">
             <a href="mailto:kdean15@uncc.edu">
               <img src={'/images/mail.png'} />
-              <p>kad9603@gmail.com</p>
+              <p>muhammadkaleb67@gmail.com</p>
             </a>
             <a href="tel:9802987018">
               <img src={'/images/phone.png'} />
